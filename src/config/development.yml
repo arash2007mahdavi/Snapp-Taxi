@@ -1,0 +1,7 @@
+Server:
+  Port: 1212
+  Host: localhost
+  ApiKey: "9923644584566"
+Logger:
+  Path: ../logs/logs.log
+  LogLevel: debug
