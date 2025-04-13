@@ -20,6 +20,7 @@ type serverConfig struct {
 type loggerConfig struct {
 	Path     string
 	LogLevel string
+	Type     string
 }
 
 func GetConfig() *Config {

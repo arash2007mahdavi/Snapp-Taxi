@@ -8,5 +8,5 @@ import (
 
 func UsersRouter(r *gin.RouterGroup) {
 	h := handlers.GetUserHelper()
-	r.POST("/create", h.AddUser)
+	r.POST("/new/user", h.AddUser)
 }

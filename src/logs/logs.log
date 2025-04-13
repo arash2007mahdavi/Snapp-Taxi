@@ -1,0 +1,12 @@
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Fullname":"arash mahdavi","ID":"arash2007mahdavi","Category":"User","SubCategory":"New User","time":"2025-04-12T20:21:07+03:30","message":"new user created"}
+{"level":"error","AppName":"Snapp","Logger":"ZeroLogger","Category":"Admin","SubCategory":"Check","time":"2025-04-13T23:32:42+03:30","message":"invalid Admin"}
+{"level":"error","AppName":"Snapp","Logger":"ZeroLogger","Category":"Admin","SubCategory":"Check","time":"2025-04-13T23:32:55+03:30","message":"invalid Admin"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Fullname":"mehdi torabi","ID":"mehdiii","Category":"Admin","SubCategory":"New Admin","time":"2025-04-13T23:35:38+03:30","message":"new admin created"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Fullname":"mehdi torabi","User ID":"mehdiii","Category":"User","SubCategory":"New User","time":"2025-04-13T23:53:45+03:30","message":"new user created"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Fullname":"ahmad zogi","User ID":"ahmaddd","Category":"User","SubCategory":"New User","time":"2025-04-13T23:54:09+03:30","message":"new user created"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Fullname":"arash akbari","User ID":"akbariil","Category":"User","SubCategory":"New User","time":"2025-04-13T23:54:30+03:30","message":"new user created"}
+{"level":"error","AppName":"Snapp","Logger":"ZeroLogger","Category":"Admin","SubCategory":"Check","time":"2025-04-13T23:54:47+03:30","message":"invalid Admin"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"arash2007mahdavi","Category":"Admin","SubCategory":"See Users","time":"2025-04-13T23:55:06+03:30","message":"admin see users"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"arash2007mahdavi","Category":"Admin","SubCategory":"See Admins","time":"2025-04-13T23:55:45+03:30","message":"admin see admins"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"akbariil","Fullname":"arash akbari","Category":"Admin","SubCategory":"New Admin","time":"2025-04-13T23:56:07+03:30","message":"new admin created"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"akbariil","Category":"Admin","SubCategory":"See Admins","time":"2025-04-13T23:56:33+03:30","message":"admin see admins"}

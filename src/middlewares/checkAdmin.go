@@ -18,7 +18,7 @@ func CheckAdmin(c *gin.Context) {
 	password := c.GetHeader("password")
 	ok := data.AdminCheck(id, password)
 	if !ok {
-		logger.Error(loggers.Admin, loggers.Check, "invalid Admin", nil)
+		logger.Warn(loggers.Admin, loggers.Check, "invalid Admin", nil)
 		c.AbortWithStatusJSON(http.StatusUnauthorized, responses.GenerateResponseWithError(
 			false,
 			http.StatusUnauthorized,

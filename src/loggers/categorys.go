@@ -38,8 +38,14 @@ const (
 	PasswordValidation SubCategory = "PasswordValidation"
 
 	// Admin
-	Add SubCategory = "Add"
-	Check SubCategory = "Check"
+	Add       SubCategory = "Add"
+	Check     SubCategory = "Check"
+	NewAdmin  SubCategory = "New Admin"
+	SeeUsers  SubCategory = "See Users"
+	SeeAdmins SubCategory = "See Admins"
+
+	// User
+	NewUser SubCategory = "New User"
 )
 
 const (
@@ -54,4 +60,9 @@ const (
 	Latency      ExtraKey = "Latency"
 	Body         ExtraKey = "Body"
 	ErrorMessage ExtraKey = "ErrorMessage"
+	UserID       ExtraKey = "User ID"
+	AdminID      ExtraKey = "Admin ID"
+	Fullname     ExtraKey = "Fullname"
+	Password     ExtraKey = "Password"
+	Wallet       ExtraKey = "Wallet"
 )

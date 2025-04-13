@@ -5,3 +5,4 @@ Server:
 Logger:
   Path: ../logs/logs.log
   LogLevel: debug
+  Type: zerologger

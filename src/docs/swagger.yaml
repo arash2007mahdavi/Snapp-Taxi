@@ -1,0 +1,43 @@
+definitions:
+  responses.Response:
+    properties:
+      Error:
+        type: string
+      Result: {}
+      Status:
+        type: boolean
+      StatusCode:
+        type: integer
+      ValidationError:
+        items:
+          $ref: '#/definitions/validations.ValidationError'
+        type: array
+    type: object
+  validations.ValidationError:
+    properties:
+      Property:
+        type: string
+      Tag:
+        type: string
+      Value:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /user/create:
+    post:
+      consumes:
+      - application/json
+      description: new user
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: new user
+      tags:
+      - User
+swagger: "2.0"
