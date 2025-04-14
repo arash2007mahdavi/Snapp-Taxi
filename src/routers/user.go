@@ -9,4 +9,5 @@ import (
 func UsersRouter(r *gin.RouterGroup) {
 	h := handlers.GetUserHelper()
 	r.POST("/new/user", h.AddUser)
+	r.POST("/delete/account", h.DeleteAccount)
 }

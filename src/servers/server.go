@@ -27,7 +27,8 @@ func NewServer(cfg *config.Config) {
 
 	snapp := engine.Group("/snapp")
 	{
-		
+		driver := snapp.Group("/driver")
+		routers.DriverRouter(driver)
 		user := snapp.Group("/user")
 		routers.UsersRouter(user)
 		admin := snapp.Group("/admin")

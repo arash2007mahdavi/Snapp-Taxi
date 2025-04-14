@@ -3,7 +3,6 @@ package handlers
 import (
 	"fmt"
 	"net/http"
-	"snapp/config"
 	"snapp/data"
 	"snapp/loggers"
 	"snapp/responses"
@@ -11,7 +10,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var logger = loggers.NewLogger(config.GetConfig())
 type AdminHelper struct {
 }
 
@@ -27,7 +25,7 @@ func GetAdminHelper() *AdminHelper {
 // @Success 200 {object} responses.Response "Success"
 // @Router /admin/see/users [get]
 func (h AdminHelper) SeeUsers(c *gin.Context) {
-	logger.Info(loggers.Admin, loggers.SeeUsers, "admin see users", map[loggers.ExtraKey]interface{}{loggers.AdminID:c.GetHeader("id")})
+	log.Info(loggers.Admin, loggers.SeeUsers, "admin see users", map[loggers.ExtraKey]interface{}{loggers.AdminID:c.GetHeader("id")})
 	c.JSON(http.StatusOK, responses.GenerateNormalResponse(
 		true,
 		http.StatusOK,
@@ -43,7 +41,7 @@ func (h AdminHelper) SeeUsers(c *gin.Context) {
 // @Success 200 {object} responses.Response "Success"
 // @Router /admin/see/admins [get]
 func (h AdminHelper) SeeAdmins(c *gin.Context) {
-	logger.Info(loggers.Admin, loggers.SeeAdmins, "admin see admins", map[loggers.ExtraKey]interface{}{loggers.AdminID:c.GetHeader("id")})
+	log.Info(loggers.Admin, loggers.SeeAdmins, "admin see admins", map[loggers.ExtraKey]interface{}{loggers.AdminID:c.GetHeader("id")})
 	c.JSON(http.StatusOK, responses.GenerateNormalResponse(
 		true,
 		http.StatusOK,
@@ -60,7 +58,7 @@ type NewAdmin struct {
 func AddAdmin(new NewAdmin) error {
 	for k := range data.Admins {
 		if k == new.Id {
-			logger.Error(loggers.Admin, loggers.Add, "invalid ID", nil)
+			log.Error(loggers.Admin, loggers.Add, "invalid ID", nil)
 			return fmt.Errorf("there is an admin with this ID")
 		}
 	}
@@ -100,7 +98,7 @@ func (h AdminHelper) NewAdmin(c *gin.Context) {
 		))
 		return
 	}
-	logger.Info(loggers.Admin, loggers.NewAdmin, "new admin created", map[loggers.ExtraKey]interface{}{loggers.AdminID: new.Id, loggers.Fullname: new.Fullname})
+	log.Info(loggers.Admin, loggers.NewAdmin, "new admin created", map[loggers.ExtraKey]interface{}{loggers.AdminID: new.Id, loggers.Fullname: new.Fullname})
 	c.JSON(http.StatusOK, responses.GenerateNormalResponse(
 		true,
 		http.StatusOK,

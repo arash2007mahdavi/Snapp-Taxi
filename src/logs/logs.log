@@ -10,3 +10,13 @@
 {"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"arash2007mahdavi","Category":"Admin","SubCategory":"See Admins","time":"2025-04-13T23:55:45+03:30","message":"admin see admins"}
 {"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"akbariil","Fullname":"arash akbari","Category":"Admin","SubCategory":"New Admin","time":"2025-04-13T23:56:07+03:30","message":"new admin created"}
 {"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"akbariil","Category":"Admin","SubCategory":"See Admins","time":"2025-04-13T23:56:33+03:30","message":"admin see admins"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Fullname":"arash mahdavi","User ID":"arash2007mahdavi","Category":"User","SubCategory":"New User","time":"2025-04-14T00:18:38+03:30","message":"new user created"}
+{"level":"warn","AppName":"Snapp","Logger":"ZeroLogger","Category":"Admin","SubCategory":"Check","time":"2025-04-14T00:18:57+03:30","message":"invalid Admin"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"arash2007mahdavi","Category":"Admin","SubCategory":"See Users","time":"2025-04-14T00:19:14+03:30","message":"admin see users"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"arash2007mahdavi","Category":"Admin","SubCategory":"See Admins","time":"2025-04-14T00:19:23+03:30","message":"admin see admins"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"arash2007mahdavi","Category":"Admin","SubCategory":"See Users","time":"2025-04-14T00:19:29+03:30","message":"admin see users"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Fullname":"arash mahdavi","User ID":"arash2007mahdavi","Category":"User","SubCategory":"New User","time":"2025-04-14T00:22:27+03:30","message":"new user created"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Fullname":"arash mahdavi","User ID":"arash2007mahdavi","Category":"User","SubCategory":"New User","time":"2025-04-14T00:26:50+03:30","message":"new user created"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Category":"User","SubCategory":"Delete","time":"2025-04-14T00:27:05+03:30","message":"user account delete"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"arash2007mahdavi","Category":"Admin","SubCategory":"See Users","time":"2025-04-14T00:27:31+03:30","message":"admin see users"}
+{"level":"info","AppName":"Snapp","Logger":"ZeroLogger","Admin ID":"arash2007mahdavi","Category":"Admin","SubCategory":"See Admins","time":"2025-04-14T00:27:39+03:30","message":"admin see admins"}

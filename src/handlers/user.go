@@ -11,6 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+var log = loggers.NewLogger(config.GetConfig())
 type UserHelper struct {
 }
 
@@ -39,7 +40,6 @@ func AddUser(user SimpleUser) bool {
 	data.Users[new.Id] = new
 	return true
 }
-
 
 // @Summary New User
 // @Description New User
@@ -74,5 +74,57 @@ func (h UserHelper) AddUser(c *gin.Context) {
 		true,
 		http.StatusOK,
 		"new user added",
+	))
+}
+
+type DeleteSampleUser struct {
+	Id       string `json:"id" binding:"required"`
+	Password string `json:"password" binding:"required"`
+}
+
+func DeleteUser(target DeleteSampleUser) error {
+	for k, v := range data.Users {
+		if k == target.Id {
+			if v.Password == target.Password {
+				log.Info(loggers.User, loggers.Delete, "user account delete", nil)
+				delete(data.Users, k)
+				return nil
+			}
+		}
+	}
+	return fmt.Errorf("there is no user with this id and password")
+}
+
+// @Summary Delete User
+// @Description Delete User
+// @Tags User
+// @Accept json
+// @Produce json
+// @Success 200 {object} responses.Response "Success"
+// @Router /user/delete/account [post]
+func (h *UserHelper) DeleteAccount(c *gin.Context) {
+	target_user := DeleteSampleUser{}
+	err := c.ShouldBindJSON(&target_user)
+	if err != nil {
+		c.AbortWithStatusJSON(http.StatusNotAcceptable, responses.GenerateResponseWithValidationError(
+			false,
+			http.StatusNotAcceptable,
+			err,
+		))
+		return
+	}
+	err = DeleteUser(target_user)
+	if err != nil {
+		c.AbortWithStatusJSON(http.StatusNotAcceptable, responses.GenerateResponseWithError(
+			false,
+			http.StatusNotAcceptable,
+			err,
+		))
+		return
+	}
+	c.JSON(http.StatusOK, responses.GenerateNormalResponse(
+		true,
+		http.StatusOK,
+		"user account deleted",
 	))
 }
