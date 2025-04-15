@@ -38,14 +38,15 @@ const (
 	PasswordValidation SubCategory = "PasswordValidation"
 
 	// Admin
-	Add       SubCategory = "Add"
-	Check     SubCategory = "Check"
-	NewAdmin  SubCategory = "New Admin"
-	SeeUsers  SubCategory = "See Users"
-	SeeAdmins SubCategory = "See Admins"
+	Add        SubCategory = "Add"
+	Check      SubCategory = "Check"
+	NewAdmin   SubCategory = "New Admin"
+	SeeUsers   SubCategory = "See Users"
+	SeeAdmins  SubCategory = "See Admins"
+	SeeDrivers SubCategory = "See Drivers"
 
-	// User
-	NewUser SubCategory = "New User"
+	NewUser   SubCategory = "New User"
+	NewDriver SubCategory = "New Driver"
 )
 
 const (
@@ -62,6 +63,7 @@ const (
 	ErrorMessage ExtraKey = "ErrorMessage"
 	UserID       ExtraKey = "User ID"
 	AdminID      ExtraKey = "Admin ID"
+	DriverID     ExtraKey = "Driver ID"
 	Fullname     ExtraKey = "Fullname"
 	Password     ExtraKey = "Password"
 	Wallet       ExtraKey = "Wallet"

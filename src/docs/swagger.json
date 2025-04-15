@@ -4,9 +4,170 @@
         "contact": {}
     },
     "paths": {
-        "/user/create": {
+        "/admin/new/admin": {
             "post": {
-                "description": "new user",
+                "description": "New Admin",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "New Admin",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/admin/see/admins": {
+            "get": {
+                "description": "See Admins",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "See Admins",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/admin/see/drivers": {
+            "get": {
+                "description": "See Drivers",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Driver"
+                ],
+                "summary": "See Drivers",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/admin/see/users": {
+            "get": {
+                "description": "See Users",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Admin"
+                ],
+                "summary": "See Users",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/driver/delete/account": {
+            "post": {
+                "description": "Delete Driver",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Driver"
+                ],
+                "summary": "Delete Driver",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/driver/new/driver": {
+            "post": {
+                "description": "New Driver",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Driver"
+                ],
+                "summary": "New Driver",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/driver/see/travels/line": {
+            "get": {
+                "description": "See Travels Line",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Driver"
+                ],
+                "summary": "See Travels Line",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/charge/account": {
+            "post": {
+                "description": "Charge Account",
                 "consumes": [
                     "application/json"
                 ],
@@ -16,7 +177,99 @@
                 "tags": [
                     "User"
                 ],
-                "summary": "new user",
+                "summary": "Charge Account",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/delete/account": {
+            "post": {
+                "description": "Delete User",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "User"
+                ],
+                "summary": "Delete User",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/new/user": {
+            "post": {
+                "description": "New User",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "User"
+                ],
+                "summary": "New User",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/order": {
+            "post": {
+                "description": "Order",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "User"
+                ],
+                "summary": "Order",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/responses.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/view": {
+            "get": {
+                "description": "View",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "User"
+                ],
+                "summary": "View",
                 "responses": {
                     "200": {
                         "description": "Success",

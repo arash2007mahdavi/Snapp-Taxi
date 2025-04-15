@@ -25,11 +25,11 @@ definitions:
 info:
   contact: {}
 paths:
-  /user/create:
+  /admin/new/admin:
     post:
       consumes:
       - application/json
-      description: new user
+      description: New Admin
       produces:
       - application/json
       responses:
@@ -37,7 +37,172 @@ paths:
           description: Success
           schema:
             $ref: '#/definitions/responses.Response'
-      summary: new user
+      summary: New Admin
+      tags:
+      - Admin
+  /admin/see/admins:
+    get:
+      consumes:
+      - application/json
+      description: See Admins
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: See Admins
+      tags:
+      - Admin
+  /admin/see/drivers:
+    get:
+      consumes:
+      - application/json
+      description: See Drivers
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: See Drivers
+      tags:
+      - Driver
+  /admin/see/users:
+    get:
+      consumes:
+      - application/json
+      description: See Users
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: See Users
+      tags:
+      - Admin
+  /driver/delete/account:
+    post:
+      consumes:
+      - application/json
+      description: Delete Driver
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: Delete Driver
+      tags:
+      - Driver
+  /driver/new/driver:
+    post:
+      consumes:
+      - application/json
+      description: New Driver
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: New Driver
+      tags:
+      - Driver
+  /driver/see/travels/line:
+    get:
+      consumes:
+      - application/json
+      description: See Travels Line
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: See Travels Line
+      tags:
+      - Driver
+  /user/charge/account:
+    post:
+      consumes:
+      - application/json
+      description: Charge Account
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: Charge Account
+      tags:
+      - User
+  /user/delete/account:
+    post:
+      consumes:
+      - application/json
+      description: Delete User
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: Delete User
+      tags:
+      - User
+  /user/new/user:
+    post:
+      consumes:
+      - application/json
+      description: New User
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: New User
+      tags:
+      - User
+  /user/order:
+    post:
+      consumes:
+      - application/json
+      description: Order
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: Order
+      tags:
+      - User
+  /user/view:
+    get:
+      consumes:
+      - application/json
+      description: View
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: '#/definitions/responses.Response'
+      summary: View
       tags:
       - User
 swagger: "2.0"

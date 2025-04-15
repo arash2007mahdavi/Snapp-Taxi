@@ -17,6 +17,22 @@ func GetAdminHelper() *AdminHelper {
 	return &AdminHelper{}
 }
 
+// @Summary See Drivers
+// @Description See Drivers
+// @Tags Driver
+// @Accept json
+// @Produce json
+// @Success 200 {object} responses.Response "Success"
+// @Router /admin/see/drivers [get]
+func (h AdminHelper) SeeDrivers(c *gin.Context) {
+	log.Info(loggers.Admin, loggers.SeeDrivers, "admin see drivers", map[loggers.ExtraKey]interface{}{loggers.AdminID:c.GetHeader("id")})
+	c.JSON(http.StatusOK, responses.GenerateNormalResponse(
+		true,
+		http.StatusOK,
+		data.Drivers,
+	))	
+}
+
 // @Summary See Users
 // @Description See Users
 // @Tags Admin
