@@ -11,7 +11,7 @@ import (
 
 var DbClient *gorm.DB
 
-func initDB(cfg *config.Config) error {
+func InitDB(cfg *config.Config) error {
 	var err error
 	cnn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%v sslmode=%s TimeZone=Asia/Tehran",
 		cfg.Postgres.Host, cfg.Postgres.User, cfg.Postgres.Password, cfg.Postgres.DbName, cfg.Postgres.Port, cfg.Postgres.Sslmode,

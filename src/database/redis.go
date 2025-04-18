@@ -1,6 +1,8 @@
 package database
 
 import (
+	"context"
+	"encoding/json"
 	"fmt"
 	"snapp/config"
 	"time"
@@ -29,4 +31,25 @@ func GetRedis() *redis.Client{
 
 func CloseRedis() {
 	redisClient.Close()
+}
+
+func Set[T any](redis *redis.Client, key string, value T, duration time.Duration) error {
+	v, err := json.Marshal(value)
+	if err != nil {
+		return err
+	}
+	return redis.Set(context.Background(), key, v, duration*time.Second).Err()
+}
+
+func Get[T any](redis *redis.Client, key string) (T, error) {
+	var dest = *new(T)
+	res, err := redis.Get(context.Background(), key).Result()
+	if err != nil {
+		return dest, err
+	}
+	err = json.Unmarshal([]byte(res), dest)
+	if err != nil {
+		return dest, err
+	}
+	return dest, nil
 }
