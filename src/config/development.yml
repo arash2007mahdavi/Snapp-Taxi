@@ -6,3 +6,27 @@ Logger:
   Path: ../logs/logs.log
   LogLevel: debug
   Type: zerologger
+Postgres:
+  Host: localhost
+  User: arash2007mahdavi
+  Password: arash2007
+  Port: 5432
+  DbName: SnappDatabase
+  Sslmode: disable
+  MaxIdleConns: 5
+  MaxOpenConns: 100
+  ConnMaxLifeTime: 5
+Redis:
+  Host: localhost
+  Password: arash2007
+  Port: 6379
+  Db: 0
+  DialTimeout: 5
+  ReadTimeout: 5
+  WriteTimeout: 5
+  PoolSize: 10
+  PoolTimeout: 15
+  IdleCheckFrequency: 500
+Otp:
+  Digit: 6
+  Expire: 120

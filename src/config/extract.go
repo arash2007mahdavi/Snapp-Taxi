@@ -2,13 +2,47 @@ package config
 
 import (
 	"os"
+	"time"
 
 	"github.com/spf13/viper"
 )
 
 type Config struct {
-	Server serverConfig
-	Logger loggerConfig
+	Server   serverConfig
+	Logger   loggerConfig
+	Postgres postgresConfig
+	Redis    redisConfig
+	Otp      otpConfig
+}
+
+type postgresConfig struct {
+	Host            string
+	User            string
+	Password        string
+	Port            int
+	DbName          string
+	Sslmode         string
+	MaxIdleConns    int
+	MaxOpenConns    int
+	ConnMaxLifeTime time.Duration
+}
+
+type redisConfig struct {
+	Host               string
+	Password           string
+	Port               int
+	Db                 int
+	DialTimeout        time.Duration
+	ReadTimeout        time.Duration
+	WriteTimeout       time.Duration
+	PoolSize           int
+	PoolTimeout        time.Duration
+	IdleCheckFrequency int
+}
+
+type otpConfig struct {
+	Digit  int
+	Expire time.Duration
 }
 
 type serverConfig struct {
